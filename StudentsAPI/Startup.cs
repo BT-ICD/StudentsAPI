@@ -34,6 +34,7 @@ namespace StudentsAPI
             services.AddSingleton<ITestResultDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<TestResultDatabaseSettings>>().Value);
             services.AddSingleton<StudentService>();
+            services.AddSingleton<ResultService>();
             services.AddControllers();
         }
 

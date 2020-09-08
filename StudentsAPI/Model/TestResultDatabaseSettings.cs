@@ -11,6 +11,7 @@ namespace StudentsAPI.Model
     public interface ITestResultDatabaseSettings
     {
         string StudentsCollectionName { get; set; }
+        string TestResultCollectionName { get; set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }
@@ -19,5 +20,6 @@ namespace StudentsAPI.Model
         public string StudentsCollectionName { get ; set ; }
         public string ConnectionString { get; set ; }
         public string DatabaseName { get ; set ; }
+        public string TestResultCollectionName { get; set; }
     }
 }
