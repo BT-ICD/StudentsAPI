@@ -20,5 +20,8 @@ namespace StudentsAPI.Services
 
         public List<Student> GetStudents() =>
                 _students.Find(student => true).ToList();
+
+        public Student GetById(string id) =>
+            _students.Find(student => student.Id == id).FirstOrDefault();
     }
 }

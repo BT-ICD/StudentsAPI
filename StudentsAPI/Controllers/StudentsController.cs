@@ -21,5 +21,14 @@ namespace StudentsAPI.Controllers
         [HttpGet]
         public ActionResult<List<Student>> list() =>
                 _studentService.GetStudents();
+        [HttpGet("{id:length(24)}")]
+        public ActionResult<Student> GetById(string id)
+        {
+            var student = _studentService.GetById(id);
+            if (student == null)
+                return NotFound();
+            return student;
+        }
+
     }
 }
